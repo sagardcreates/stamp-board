@@ -39,7 +39,7 @@ export default function PixiBoard({ containerRef, stamps }: Props) {
         WebkitUserSelect: "none",
         // 🔥 fixed, non-panning radial gradient
         background:
-          "radial-gradient(2400px circle at 50% 0%, rgba(54,55,75,0.7), rgba(54,55,75,0) 100%), " + "#17181C",
+          "radial-gradient(1200px circle at 50% -20%, rgba(46,48,99,1), rgba(46,48,99,0) 100%), " + "#14151C",
       }}
     >
       <ReactPixiApplication

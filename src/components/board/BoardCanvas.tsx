@@ -262,10 +262,21 @@ export default function BoardCanvas({ stamps }: { stamps: StampDTO[] }) {
     overlay.addChild(modalSprite);
   
     // ✅ use CSS-pixel screen size for centering & fit
+    const getMargin = (w: number, h: number) => {
+      if (w < 600) return 20;        // 📱 small screens
+      if (w < 1200) return h / 4;    // 💻 medium screens
+      return h / 2;                  // 🖥 big screens
+    };
+    
     const { w: appW, h: appH } = getScreen();
     const tw = texture.width, th = texture.height;
-    const margin = appH/2;
-    const scaleToFit = Math.min((appW - margin) / tw, (appH - margin) / th);
+    
+    const margin = getMargin(appW, appH);
+    
+    const scaleToFit = Math.min(
+      (appW - margin) / tw,
+      (appH - margin) / th
+    );
   
     // fade in dim + fly to exact center
     gsap.to(dim, { alpha: OVERLAY?.alpha ?? 0.55, duration: 0.25, ease: "power1.out" });
