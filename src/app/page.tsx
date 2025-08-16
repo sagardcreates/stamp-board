@@ -11,7 +11,7 @@ async function fetchStamps(): Promise<StampDTO[]> {
     url: `/stamps/${i + 1}.png`,
     x: randomInRange(3200, 4800),
     y: randomInRange(2400, 3600),
-    scale: randomInRange(0.28, 0.32),
+    scale: randomInRange(0.12, 0.16),
     rotation: randomInRange(-1, 1),
   }));
 }

@@ -403,10 +403,10 @@ export default function BoardCanvas({ stamps }: { stamps: StampDTO[] }) {
           height={worldH}
           x={0}
           y={0}
-          alpha={0.35}
+          alpha={0.3}
           eventMode="none"
           roundPixels
-          tileScale={{ x: 0.3, y: 0.3 }}
+          tileScale={{ x: 0.2, y: 0.2 }}
         />
       )}
 
